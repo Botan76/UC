@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "838026951415",
+    "project_id": "ultrafin-8c3f4",
+    "storage_bucket": "ultrafin-8c3f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838026951415:android:3731fe41053cb192af71f2",
+        "android_client_info": {
+          "package_name": "com.example.ultrafin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838026951415-dao5b52ogo8nidlekglgq5ccmkkr3974.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU9A818ZOzzBMYoDj6cBL8wuC9UdwCopo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838026951415-dao5b52ogo8nidlekglgq5ccmkkr3974.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
