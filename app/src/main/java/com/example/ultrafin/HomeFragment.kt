@@ -57,8 +57,8 @@ class HomeFragment : Fragment() {
         binding.homeEmail.setOnClickListener {
             val intent = context?.packageManager?.getLaunchIntentForPackage("com.microsoft.office.outlook")
             if (intent != null) {
-                //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-               // intent.addCategory(Intent.CATEGORY_LAUNCHER)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.addCategory(Intent.CATEGORY_LAUNCHER)
                 startActivity(intent)
             } else {
                 Toast.makeText(requireContext(), "Outlook app not found.", Toast.LENGTH_SHORT).show()
@@ -72,7 +72,8 @@ class HomeFragment : Fragment() {
         }
 ///// Rapor
         binding.homeRaport.setOnClickListener {
-            Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_LONG).show()
+
+            findNavController().navigate(R.id.action_homeFragment_to_boatplaceFragment)
         }
 
 

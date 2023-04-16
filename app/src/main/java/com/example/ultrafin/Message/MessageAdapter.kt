@@ -41,7 +41,7 @@ class MessageAdapter: RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
        // val item = fragmesg.model.selectedItems[position]
         //val item = selectedItems[position]
         //holder.bind(item)
-        holder.username1.text = selectedItems[position].userName
+        holder.username1.text = (position+1).toString() + ". " + selectedItems[position].userName
         holder.password1.text =  selectedItems[position].phoneNum
 
 

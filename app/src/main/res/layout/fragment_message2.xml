@@ -18,10 +18,11 @@
 
     <Button
         android:id="@+id/BTN_backMessage"
-        android:layout_width="81dp"
-        android:layout_height="42dp"
+        android:layout_width="113dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="3dp"
+        android:drawableStart="@android:drawable/ic_menu_revert"
         android:text="back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

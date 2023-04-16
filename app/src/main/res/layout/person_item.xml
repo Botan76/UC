@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="65dp"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+    android:background="@drawable/boatback4"
     android:hapticFeedbackEnabled="false">
 
     <TextView
@@ -15,6 +15,7 @@
         android:layout_marginStart="8dp"
         android:gravity="center_vertical"
         android:text="TextView"
+        android:textColor="#ECECEC"
         android:textSize="19dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/checkBox"
@@ -25,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:shadowColor="#391010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +37,19 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textColor="#CCCCCC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="380dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
