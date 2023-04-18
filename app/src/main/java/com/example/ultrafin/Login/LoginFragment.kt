@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.example.ultrafin.R
 import com.example.ultrafin.databinding.FragmentLoginBinding
 
 
@@ -45,14 +46,13 @@ class LoginFragment : Fragment() {
         }
         model.errorMessage.observe(viewLifecycleOwner, errorObserver)
 
+binding.BTNRegister.setOnClickListener {
+    requireActivity().supportFragmentManager.beginTransaction().replace(R.id.mainFragCon, RegisterFragment())
+        .addToBackStack(null).commit()
+
+}
 
 
-        binding.BTNRegister.setOnClickListener {
-            val useremail = binding.ETEmail.text.toString()
-            val userpassword = binding.ETPassword.text.toString()
-
-            model.register(useremail, userpassword)
-        }
         binding.BTNLogin.setOnClickListener {
             val useremail = binding.ETEmail.text.toString()
             val userpassword = binding.ETPassword.text.toString()
