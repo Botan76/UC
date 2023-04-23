@@ -1,5 +1,7 @@
 package com.example.ultrafin.Login
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -51,7 +53,11 @@ binding.BTNRegister.setOnClickListener {
         .addToBackStack(null).commit()
 
 }
-
+        binding.policyTV.setOnClickListener {
+            val url = "https://www.termsfeed.com/live/27d1e803-aff5-4838-92ca-7300016f8807"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
 
         binding.BTNLogin.setOnClickListener {
             val useremail = binding.ETEmail.text.toString()

@@ -1,6 +1,8 @@
 package com.example.ultrafin.Login
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -47,11 +49,23 @@ class RegisterFragment : Fragment() {
         }
         model.errorMessage.observe(viewLifecycleOwner, errorObserver)
 
+        binding.PrivacyTV.setOnClickListener{
+            val url = "https://www.termsfeed.com/live/27d1e803-aff5-4838-92ca-7300016f8807"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
+        val privacyPolicyCheckbox = binding.checkboxPrivacy
+        val signUpButton = binding.BTNRegister
+        privacyPolicyCheckbox.setOnCheckedChangeListener { buttonView, isChecked ->
+            // Enable or disable the sign-up button based on the state of the checkbox
+            signUpButton.isEnabled = isChecked
+        }
+
         binding.BTNRegister.setOnClickListener {
             val useremail = binding.ETEmail.text.toString()
             val userpassword = binding.ETPassword.text.toString()
             val permission = binding.ETPermission.text.toString()
-           if (permission == ""){
+            if (permission == ""){
                Toast.makeText(requireContext(), "You need the permission code", Toast.LENGTH_LONG).show()
                hideKeyboard(view)
            }else {

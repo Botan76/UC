@@ -55,22 +55,14 @@ class HomeFragment : Fragment() {
         }
 ///// Email Button
         binding.homeEmail.setOnClickListener {
-            val intent = context?.packageManager?.getLaunchIntentForPackage("com.microsoft.office.outlook")
-            if (intent != null) {
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                intent.addCategory(Intent.CATEGORY_LAUNCHER)
-                startActivity(intent)
-            } else {
-                Toast.makeText(requireContext(), "Outlook app not found.", Toast.LENGTH_SHORT).show()
-            }
-
+            Toast.makeText(requireContext(), "Coming soon", Toast.LENGTH_SHORT).show()
         }
 
 ///// Message
         binding.homeMessage.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_messageFragment2)
         }
-///// Rapor
+///// position
         binding.homeRaport.setOnClickListener {
 
             findNavController().navigate(R.id.action_homeFragment_to_boatplaceFragment)

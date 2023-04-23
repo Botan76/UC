@@ -35,7 +35,7 @@
         android:id="@+id/textView3"
         android:layout_width="220dp"
         android:layout_height="206dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -94,14 +94,15 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="32dp"
         android:background="@android:drawable/screen_background_light_transparent"
         android:text="sign up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutpermission" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutpermission"
+        android:enabled="false"/>
 
     <TextView
         android:id="@+id/textView"
@@ -116,5 +117,27 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkboxPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="I agree to the "
+        app:layout_constraintBottom_toTopOf="@+id/BTN_register"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/PrivacyTV"
+        android:layout_width="104dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:foregroundGravity="center"
+        android:text="Privacy Policy"
+        android:textAlignment="viewStart"
+        android:textColor="#040FDF"
+        app:layout_constraintBottom_toTopOf="@+id/BTN_register"
+        app:layout_constraintStart_toEndOf="@+id/checkboxPrivacy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
